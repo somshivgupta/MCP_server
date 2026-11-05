@@ -38,7 +38,7 @@ def init_db():  # Keep as sync for initialization
 # Initialize database synchronously at module load
 init_db()
 
-@mcp.tool()
+@mcp.tool(name="add_expenses")
 async def add_expense(date, amount, category, subcategory="", note=""):  # Changed: added async
     '''Add a new expense entry to the database.'''
     try:
